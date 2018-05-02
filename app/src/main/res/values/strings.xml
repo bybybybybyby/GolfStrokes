@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Golf Strokes</string>
+    <string name="hole">Hole</string>
+    <string name="strokes">Strokes</string>
+    <string name="putts">Putts</string>
+    <string name="_0">0</string>
+</resources>
