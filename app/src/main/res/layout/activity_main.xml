@@ -12,15 +12,22 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingBottom="20dp"
-        tools:context="com.example.android.courtcounter.MainActivity">
+        tools:context="com.example.android.golfstrokes.MainActivity">
+
+        <!--Vertical Line-->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@android:color/darker_gray" />
 
         <!--Golf Hole Numbers-->
         <LinearLayout
             android:id="@+id/holes"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
             android:orientation="vertical">
 
             <TextView
@@ -28,56 +35,57 @@
                 android:layout_height="35dp"
                 android:layout_marginBottom="65dp"
                 android:text="@string/hole"
-                android:fontFamily="sans-serif-medium"
-                android:padding="8dp"
+                android:gravity="center"
+                android:layout_gravity="center"
                 android:textColor="#616161"
-                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textSize="18sp"
                 />
 
             <TextView
                 style="@style/Buttons"
                 android:padding="8dp"
-                android:text="1"
+                android:text="@string/_1"
                 />
 
             <TextView
                 style="@style/Buttons"
-                android:text="2"
+                android:text="@string/_2"
                 />
 
             <TextView
                 style="@style/Buttons"
-                android:text="3"
+                android:text="@string/_3"
                 />
 
             <TextView
                 style="@style/Buttons"
-                android:text="4"
+                android:text="@string/_4"
                 />
 
             <TextView
                 style="@style/Buttons"
-                android:text="5"
+                android:text="@string/_5"
                 />
 
             <TextView
                 style="@style/Buttons"
-                android:text="6"
+                android:text="@string/_6"
                 />
 
             <TextView
                 style="@style/Buttons"
-                android:text="7"
+                android:text="@string/_7"
                 />
 
             <TextView
                 style="@style/Buttons"
-                android:text="8"
+                android:text="@string/_8"
                 />
 
             <TextView
                 style="@style/Buttons"
-                android:text="9"
+                android:text="@string/_9"
                 />
         </LinearLayout>
 
@@ -85,7 +93,9 @@
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:background="@android:color/darker_gray" />
 
         <!--Buttons to subtract Stroke-->
@@ -154,23 +164,22 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:fontFamily="sans-serif-medium"
+                android:textStyle="bold"
                 android:gravity="center"
-                android:padding="8dp"
+                android:layout_gravity="center"
                 android:text="@string/strokes"
                 android:textColor="#616161"
-                android:textSize="16sp" />
+                android:textSize="18sp" />
 
             <!--Total Full Strokes count at top-->
             <TextView
                 android:id="@+id/full_strokes"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:fontFamily="sans-serif-light"
                 android:gravity="center"
                 android:paddingBottom="8dp"
                 android:text="@string/_0"
-                android:textSize="40sp" />
+                android:textSize="38sp" />
 
             <TextView
                 android:id="@+id/stroke_1"
@@ -287,7 +296,9 @@
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:background="@android:color/darker_gray" />
 
         <!--Buttons to subtract Putts-->
@@ -297,50 +308,41 @@
             android:orientation="vertical">
 
             <Button
+                style="@style/MinusButton"
                 android:layout_marginTop="100dp"
-                style="@style/MinusButton"
-                android:onClick="minusPuttHole1"
-                />
+                android:onClick="minusPuttHole1" />
 
             <Button
                 style="@style/MinusButton"
-                android:onClick="minusPuttHole2"
-                />
+                android:onClick="minusPuttHole2" />
 
             <Button
                 style="@style/MinusButton"
-                android:onClick="minusPuttHole3"
-                />
+                android:onClick="minusPuttHole3" />
 
             <Button
                 style="@style/MinusButton"
-                android:onClick="minusPuttHole4"
-                />
+                android:onClick="minusPuttHole4" />
 
             <Button
                 style="@style/MinusButton"
-                android:onClick="minusPuttHole5"
-                />
+                android:onClick="minusPuttHole5" />
 
             <Button
                 style="@style/MinusButton"
-                android:onClick="minusPuttHole6"
-                />
+                android:onClick="minusPuttHole6" />
 
             <Button
                 style="@style/MinusButton"
-                android:onClick="minusPuttHole7"
-                />
+                android:onClick="minusPuttHole7" />
 
             <Button
                 style="@style/MinusButton"
-                android:onClick="minusPuttHole8"
-                />
+                android:onClick="minusPuttHole8" />
 
             <Button
                 style="@style/MinusButton"
-                android:onClick="minusPuttHole9"
-                />
+                android:onClick="minusPuttHole9" />
         </LinearLayout>
 
         <!--Putts per hole-->
@@ -353,77 +355,67 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:fontFamily="sans-serif-medium"
                 android:gravity="center"
-                android:padding="8dp"
+                android:layout_gravity="center"
                 android:text="@string/putts"
                 android:textColor="#616161"
-                android:textSize="16sp" />
+                android:textStyle="bold"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/putts"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:fontFamily="sans-serif-light"
                 android:gravity="center"
                 android:paddingBottom="8dp"
                 android:text="@string/_0"
-                android:textSize="40sp" />
+                android:textSize="38sp" />
 
 
             <TextView
                 android:id="@+id/putt_1"
                 style="@style/PlusButton"
-                android:text="@string/_0"
-                />
+                android:text="@string/_0" />
 
             <TextView
                 android:id="@+id/putt_2"
                 style="@style/PlusButton"
-                android:text="@string/_0"
-                />
+                android:text="@string/_0" />
 
             <TextView
                 android:id="@+id/putt_3"
                 style="@style/PlusButton"
-                android:text="@string/_0"
-                />
+                android:text="@string/_0" />
 
             <TextView
                 android:id="@+id/putt_4"
                 style="@style/PlusButton"
-                android:text="@string/_0"
-                />
+                android:text="@string/_0" />
 
             <TextView
                 android:id="@+id/putt_5"
                 style="@style/PlusButton"
-                android:text="@string/_0"
-                />
+                android:text="@string/_0" />
 
             <TextView
                 android:id="@+id/putt_6"
                 style="@style/PlusButton"
-                android:text="@string/_0"
-                />
+                android:text="@string/_0" />
 
             <TextView
                 android:id="@+id/putt_7"
                 style="@style/PlusButton"
-                android:text="@string/_0"
-                />
+                android:text="@string/_0" />
 
             <TextView
                 android:id="@+id/putt_8"
                 style="@style/PlusButton"
-                android:text="@string/_0"
-                />
+                android:text="@string/_0" />
 
             <TextView
                 android:id="@+id/putt_9"
                 style="@style/PlusButton"
-                android:text="@string/_0"
-                />
+                android:text="@string/_0" />
 
         </LinearLayout>
 
@@ -431,6 +423,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
             android:orientation="vertical">
 
             <Button
@@ -499,9 +493,9 @@
             android:layout_centerHorizontal="false"
             android:layout_centerVertical="true"
             android:layout_marginLeft="60dp"
-            android:layout_toRightOf="@id/holes"
+            android:layout_marginStart="60dp"
             android:onClick="resetScores"
-            android:text="Reset" />
+            android:text="@string/reset" />
 
         <TextView
             android:id="@+id/total"
@@ -511,12 +505,13 @@
             android:layout_centerHorizontal="false"
             android:layout_centerVertical="true"
             android:layout_marginLeft="80dp"
+            android:layout_marginStart="80dp"
             android:layout_toRightOf="@id/reset"
-            android:fontFamily="sans-serif"
-            android:text="Total:"
+            android:layout_toEndOf="@+id/reset"
+            android:text="@string/total"
             android:textAllCaps="true"
             android:textColor="@android:color/background_dark"
-            android:textSize="22dp" />
+            android:textSize="22sp" />
 
         <TextView
             android:id="@+id/total_score"
@@ -526,13 +521,13 @@
             android:layout_centerHorizontal="false"
             android:layout_centerVertical="true"
             android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
             android:layout_toRightOf="@id/total"
+            android:layout_toEndOf="@+id/total"
             android:text="@string/_0"
             android:textColor="@android:color/holo_green_dark"
-            android:textSize="32sp" />
-
+            android:textSize="40sp" />
 
     </RelativeLayout>
-
 
 </RelativeLayout>
